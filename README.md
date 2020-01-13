@@ -336,3 +336,12 @@ Generate each of the words by flipping the coin (t=tails/h=head) and rolling the
 |t4133 visit|t4241 what|t4345 yard||||||
 |t4134 visual|t4242 wheat|t4346 year||||||
 
+
+## checks
+
+- list was checked against BIP39 list https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt
+- a set of 10 random trial has been executed on this list to be sure the resulting 12-words sequence was ok for bip39 standard and has been correctly imported using a software wallet.
+
+## thanks to
+
+Tael Frinn
