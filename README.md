@@ -1,22 +1,31 @@
-# Bip39-diceware
+# bip39 / diceware / entropy
 
-## Generate a Bip39 Wallet Mnemonic using plain six sided dice and a coin
+## goal
 
-Print Friendly verison:
-http://github.com/taelfrinn/Bip39-diceware/raw/master/coin_plus_d6_bip39.pdf
+the goal is to bypass hardware random systems and create manually the 12 words sequence, by generating the needed entropy manually with dices and coin. This allow us to get a random 12words sequence completely out of any computing system.
 
+## Generate a bip39 valid mnemonic using 4 dices and a coin
 
+Generate a bip39 mnemonic using a coin and 4 standard 6 sided dice.
+Generate each of the words by flipping the coin (t=tails/h=head) and rolling the dice (1-6). In case the resulting sequence is larger than 4362, then you shall roll again dices.
 
-Generate a bip39 passphrase using a coin and four standard 6 sided dice.
-Generate each of the words by flipping the coin (t/h) and rolling the dice (1-6).
-Consistently and fairly, to avoid bias, arrange the dice in order left to right.
-Look up the result in the attached table. If you flip tails and get a dice value larger
-than 4362 then you will have to flip+roll over again. After you are finished all 12
-words, the last word may need adjustment in order to meet the checksum requirements.
-Using a bip39 wallet try each of the words in the block of 16 that the last
-word is found inside; one and only one word will work from the group.
+## procedure
 
-You have now generated a bip39 compliant wallet using manual entropy!
+- roll dices and get the 4 digits
+- write on a paper digits reading them from left to right
+- roll the coin and write Head or Tail before the number from point above
+- search on the table the word corresponding to the alphanumeric sequence you've just created
+- write on a sheet of paper this word (the order is important)
+- repeat points above 12 times to get 12 words
+
+ for the 12 word (which is a checksum) do as follow
+
+- consider 16 words block on the table
+- test in that 16 words block (where the 12th word lives) each word as 12th possible word. You can do that using the ian coleman bip39 tool
+- when the bip39 tool says the sequence is valid bip39, you made it and you have the final 12 words correct sequence
+- now you can import that sequence on a wallet
+
+ NB: all of this must be done in an OFFLINE system (no internet connection)
 
 
 ----
