@@ -4,6 +4,8 @@
 
 the goal is to bypass hardware random systems and create manually the 12 words sequence, by generating the needed entropy manually with dices and coin. This allow us to get a random 12words sequence completely out of any computing system.
 
+Full and Print Friendly version(use this): http://github.com/taelfrinn/Bip39-diceware/raw/master/coin_plus_d6_bip39.pdf
+
 ## Generate a bip39 valid mnemonic using 4 dices and a coin
 
 Generate a bip39 mnemonic using a coin and 4 standard 6 sided dice.
